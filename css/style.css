@@ -1,0 +1,156 @@
+/* =============== common css ===================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter';
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #eaeaea;
+}
+
+.sidebar .nav-link {
+    color: #333;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.sidebar .nav-link.active {
+    color: white;
+}
+
+.content {
+    padding: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+.navbar {
+    color: black;
+    border-bottom: 1px solid rgb(201, 199, 199);
+}
+
+.navbar a {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.navbar .nav-data {
+    font-size: 20px;
+    position: relative;
+    top: -0px;
+}
+
+.navbar .nav-data i {
+    position: absolute;
+    top: 0px;
+    padding: 5px 10px;
+    bottom: 30px;
+    color: grey;
+}
+
+.navbar .nav-data input {
+    border-radius: 50px;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.navbar .nav-icon i {
+    margin-left: 20px;
+    color: grey;
+}
+
+.navbar .nav-icon i:first-child {
+    background-color: blue;
+    border-radius: 50px;
+    color: white;
+}
+
+.navbar .nav-icon i:nth-child(2) {
+    border: 1px solid grey;
+    border-radius: 50px;
+}
+
+.navbar p {
+    font-weight: 700;
+}
+
+.navbar p span {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    font-style: 12px;
+}
+
+.navbar .nav-icon i:last-child {
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 50px;
+    color: green;
+    background-color: rgb(102, 242, 100);
+}
+
+.sidebar .side-data span {
+    font-size: 15px;
+    color: #a3a7b2;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.sidebar .side-data h5 {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #7d9dfd;
+    color: #0c3dc2;
+    padding-left: 20px;
+}
+
+.sidebar p {
+    color: #a3a7b2;
+}
+
+.sidebar i {
+    color: #a3a7b2;
+}

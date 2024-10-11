@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zendenta Clinic</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="ml-auto">
+                <img src="images/logo.png" alt="Admin" width="30">
+            </div>
+            <a class="navbar-brand mx-3" href="#">Zendenta</a>
+            <a class="nav-link active" aria-current="page" href="#">
+                <i class="fa-solid fa-chevron-left ps-5 ms-5"></i>
+                <i class="bi-speedometer2"></i> Dashboard
+            </a>
+
+            <div class="nav-data ps-5">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="username" placeholder="serch for anything here...">
+            </div>
+            <div class="nav-icon">
+                <i class="fs-5 p-1 fa-solid fa-plus"></i>
+                <i class="p-1 fa-solid fa-question"></i>
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-flag"></i>1/4
+
+            </div>
+            <div class="nav-profile d-flex justify-content-between m-2">
+                <img class="m-4" src=" images/Profile Image.png" alt="Profile image" />
+                <p class="mt-4 fs-6">Darell Steward <span>Super admin</span></p>
+                <i class="mt-5 fs-6 fa-solid fa-chevron-down ps-3"></i>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-speedometer2"></i> Dashboard
+                            </a>
+                        </li>
+                        <div class="side-data">
+                            <h6> <i class="fa-solid fa-book-medical"></i> Avicena Clinic</h6><span>845 Euclid
+                                Avenue,CA</span>
+                            <h5 class="mt-3">Dashboard</h5>
+                            <p class="pt-3">Clinic</p>
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-folder-plus"></i> Reservations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-circle-user"></i> Patients</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-stethoscope"></i> Treatments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user"></i> Staff List</a>
+                        </li>
+                        <p class="pt-3">Finance</p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-circle-user"></i> Accounts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-chart-simple"></i> Salse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <i class="fa-solid fa-receipt"></i> Purchase</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-money-check"></i> Payment Method</a>
+                        </li>
+                        <p>physical asset</p>
+                        <li class="nav-item">
+                        <li class="nav-item"></li>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-bottle-water"></i> Stock</a>
+                        </li>
+                        </li>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i> Peripherals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-bug"></i> Report</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-headphones"></i> Customer Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+                <h1 class="h2 mb-4">Dashboard</h1>
+
+
+                <!-- Row 1: Cashflow and Expenses -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cashflow</h5>
+                                <div class="chart-container">
+                                    <canvas id="cashflowChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Expenses</h5>
+                                <!-- Placeholder for expenses donut chart -->
+                                <canvas id="expenseChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Income & Expenses, Patients, Stock Availability -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Income & Expenses</h5>
+                                <div class="chart-container">
+                                    <canvas id="incomeExpenseChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Patients</h5>
+                                <p>Total: 142</p>
+                                <p>Returning Patients: 61.41%</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Popular Treatment</h5>
+                                <p>Scalling Teeth</p>
+                                <p>Tooth Extraction</p>
+                                <p>General Checkup</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Stock Availability</h5>
+                                <p>Total Assets: $53,000</p>
+                                <p>Total Products: 442</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and Chart.js (for charts) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Placeholder charts using Chart.js (you can customize these with real data)
+        var ctxCashflow = document.getElementById('cashflowChart').getContext('2d');
+        var cashflowChart = new Chart(ctxCashflow, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Cashflow',
+                    data: [12000, 15000, 14000, 18000, 19000, 21000],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }]
+            }
+        });
+
+        var ctxExpense = document.getElementById('expenseChart').getContext('2d');
+        var expenseChart = new Chart(ctxExpense, {
+            type: 'doughnut',
+            data: {
+                labels: ['Rental Cost 30%', 'Wages 22%', 'Medical Equi.. 20%', 'Supplies 18%', 'Promotion Costs 8%', 'Other 2%'],
+                datasets: [{
+                    label: 'Expenses',
+                    data: [30000, 16500, 15640, 13564, 12000, 8000],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40']
+                }]
+            }
+        });
+
+        var ctxIncomeExpense = document.getElementById('incomeExpenseChart').getContext('2d');
+        var incomeExpenseChart = new Chart(ctxIncomeExpense, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Total Income $14.12 4.51%',
+                    data: [10000, 12000, 11000, 13000, 14500, 15000],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)'
+                }, {
+                    label: 'Total Expenses $612.34',
+                    data: [9000, 10000, 9500, 11000, 12500, 13500],
+                    backgroundColor: 'rgba(255, 99, 132, 0.6)'
+                }]
+            }
+        });
+    </script>
+</body>
+
+</html>
